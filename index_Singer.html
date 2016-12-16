@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 平猫的歌 </title>
+	<link rel="stylesheet" href="css/stylesheets/style.css">
+	<script src="js/jquery-1.7.2.min.js"></script>
+</head>
+
+
+<body>
+
+
+
+<div id="background"></div>
+<div id="player">
+	<div class="cover"></div>
+	<div class="ctrl">
+		<div class="tag">
+			<strong>Title</strong>
+			<span class="artist">Artist</span>
+			<span class="album">Album</span>
+		</div>
+		<div class="control">
+			<div class="left">
+				<div class="rewind icon"></div>
+				<div class="playback icon"></div>
+				<div class="fastforward icon"></div>
+			</div>
+			<div class="volume right">
+				<div class="mute icon left"></div>
+				<div class="slider left">
+					<div class="pace"></div>
+				</div>
+			</div>
+		</div>
+		<div class="progress">
+			<div class="slider">
+				<div class="loaded"></div>
+				<div class="pace"></div>
+			</div>
+			<div class="timer left">0:00</div>
+			<div class="right">
+				<div class="repeat icon"></div>
+				<div class="shuffle icon"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="webdesigntuts-workshop">
+	<!--<form action="" method="">-->
+
+	<input type="search" placeholder="Search...">
+	<button id="searchButton">Search</button>
+	<!--</form>-->
+</div>
+
+<p align="center" style="margin-bottom: 10px"><b>[<a href="index.html" target="_self">By Issued Time</a>][<a href="index_Singer.html" target="_self">By Singer Order</a>][<a href="Songlist.htm" target="_self">By Song Order</a>][<a href="#master" target="_self">What's News?</a>]
+</b></p>
+<ul id="playlist"></ul>
+<script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script src="js/script_singer.js"></script>
+<footer>
+<p><strong>This page has been accessed</strong> <img src="http://cgi.www.umich.edu/counter?link=http://www.pami.fudan.edu.cn/~jpzhang/Music/index.html&amp;width=4"> <strong>times since Dec 3rd, 2016. </strong></p>
+<a href="http://m.maploco.com/details/dce5lw0q"><img style="border:0px;" src="http://www.maploco.com/vmap/s/9419354.png" alt="Locations of Site Visitors" title="Locations of Site Visitors"/></a>
+<p>The website is created by Junping Zhang on Dec 2nd, 2016.</p>
+<p>Last Modified: Dec 11, 2016.</p>
+
+<p>&nbsp;</p>
+
+	</footer>
+<script type="text/javascript">
+
+
+    $("button[id=searchButton]").click(function(){
+
+
+        var txt=$("input[type=search]").val();
+
+
+        $("#playlist li").hide().filter(":contains('"+txt+"')").show();
+
+
+    });
+
+
+    $(function(){
+        $("input[type=search]").keypress(function(){
+
+
+            var txt=$("input[type=search]").val();
+
+
+            $("#playlist li").hide().filter(":contains('"+txt+"')").show();
+
+
+        });
+    })
+</script>
+
+</body>
+</html>
